@@ -1,12 +1,18 @@
 ```C#
-using System;
-
-class Program
+class Game
 {
-    static void Main(string[] args)
+    private int rows;
+    private int cols;
+    private int mines;
+    private char[,] board;
+    private bool[,] revealed;
+
+    public Game(int rows, int cols, int mines)
     {
-        Game game = new Game(5, 5, 5);
-        game.Play();
+        this.rows = rows;
+        this.cols = cols;
+        this.mines = mines;
+        this.board = new char[rows, cols];
+        this.revealed = new bool[rows, cols];
     }
-}
 ```
